@@ -1,8 +1,8 @@
 <div class="container" fxLayout  fxLayout.xs="column"  fxLayoutAlign="center"  fxLayoutGap="2%"  fxLayoutGap.xs="0">
-    <div class="item item-1" fxFlex="25%">
+    <div class="item item-1" fxFlex="24%">
         <md-card class="m-b-20">
             <md-card-header>
-              <md-icon>star_rate</md-icon> <md-card-title> SPONSERED</md-card-title>
+              <md-card-title > <md-icon class="md-icon-sm"> star_rate</md-icon>  SPONSERED</md-card-title>
               <span class="fill-remaining-space"></span>
               <!-- <ol>
                 <li>
@@ -34,17 +34,15 @@
               <md-tab label="Members">
                   <md-list>
                       <md-list-item *ngFor="let folder of folders">
-                        <md-icon md-list-icon>folder</md-icon>
-                        <h4 md-line>{{folder.name}}</h4>
-                        <p md-line> {{folder.updated | date}} </p>
-                      </md-list-item>
-                      <md-divider></md-divider>
-                      <h3 md-subheader>Notes</h3>
-                      <md-list-item *ngFor="let note of notes">
-                        <md-icon md-list-icon>note</md-icon>
-                        <h4 md-line>{{note.name}}</h4>
-                        <p md-line> {{note.updated | date}} </p>
-                      </md-list-item>
+                          <img mdListAvatar src="http://www.coderfirst.lk/upload/member/images/ProfilePhoto/0b6a98ed-2931-43b3-9830-a9bec7ba15b4.png" alt="...">
+                          <h3 mdLine> {{folder.name}} </h3>
+                          <p mdLine>
+                            <span> {{folder.updated}} </span>
+                            <span class="demo-2"> -- {{folder.updated}} </span>
+                          </p>
+                        </md-list-item>
+
+ 
                     </md-list>
               </md-tab>
               <md-tab label="Post">
@@ -66,8 +64,8 @@
             </md-tab-group>
       </md-card>
     </div>
-    <div class="item item-2" fxFlex="48%" >
-        <md-card class="example-card" style="margin-bottom: 20px">
+    <div class="item item-2" fxFlex="50%" >
+        <md-card class="example-card m-b-20">
             
            
             <md-card-content class="m-b-0">
@@ -90,7 +88,7 @@
               </button>
 
               <span class="fill-remaining-space"></span>
-              <button md-raised-button  color="accent" class="pull-right"> <md-icon class="md-25" mdTooltip="Share a link!" >share</md-icon>Post</button>
+              <button md-raised-button  color="primary" class="pull-right"> <md-icon class="md-25" mdTooltip="Share a link!" >share</md-icon>Post</button>
 
             </md-card-actions>
           </md-card>
@@ -98,8 +96,8 @@
         <md-card class="example-card">
             <md-card-header>
               <div md-card-avatar class="example-header-image"></div>
-              <md-card-title>Shiba Inu</md-card-title>
-              <md-card-subtitle>Dog Breed</md-card-subtitle>
+              <md-card-title>Shazin Sadakath</md-card-title>
+              <md-card-subtitle>Senior Software Engineer</md-card-subtitle>
               <span class="fill-remaining-space"></span>
               <div class="wis-numbers">
                   <span> <md-icon class="icons-md-15"> remove_red_eye</md-icon> 5  </span>
@@ -125,13 +123,23 @@
             </md-card-actions>
           </md-card>
     </div>
-    <div class="item item-3" fxFlex="25%">
-        <md-card class="p-0">
+    <div class="item item-3" fxFlex="24%">
+        <md-card class="p-0 m-b-20">
           <md-card-header class="p-t-10 p-b-10 ch-alt text-center f-c-white " style="background-color: #0091ca;">LOOKING FOR A JOB?</md-card-header>
           <md-list >
               <a md-list-item href="..."  class="no-link-boarder b-t-1" >
-                  <h3 mdLine>Junior PHP Developer</h3>
-                  <p mdLine>
+                  <h3 mdLine class="f-500 f-14">Junior PHP Developer</h3>
+                  <p mdLine class="c-lightblue f-11">
+                    Ceybex Tech  
+                  </p>
+
+                  <ul mdLine class="lgi-attrs" style="height:25px">
+                      <li  > Microsoft .NET Framework 3.5 SP1</li>
+                      <li > Web Services</li>
+              </ul>
+              </a>          <a md-list-item href="..."  class="no-link-boarder b-t-1" >
+                  <h3 mdLine class="f-500 f-14">Junior PHP Developer</h3>
+                  <p mdLine class="c-lightblue f-11">
                     Ceybex Tech  
                   </p>
 
@@ -141,8 +149,8 @@
               </ul>
               </a>
               <a md-list-item href="..."  class="no-link-boarder b-t-1" >
-                  <h3 mdLine>Junior PHP Developer</h3>
-                  <p mdLine>
+                  <h3 mdLine class="f-500 f-14">Junior PHP Developer</h3>
+                  <p mdLine class="c-lightblue f-11">
                     Ceybex Tech  
                   </p>
 
@@ -150,9 +158,10 @@
                       <li  > Microsoft .NET Framework 3.5 SP1</li>
                       <li > Web Services</li>
               </ul>
-              </a> <a md-list-item href="..."  class="no-link-boarder b-t-1" >
-                  <h3 mdLine>Junior PHP Developer</h3>
-                  <p mdLine>
+              </a>
+              <a md-list-item href="..."  class="no-link-boarder b-t-1" >
+                  <h3 mdLine class="f-500 f-14">Junior PHP Developer</h3>
+                  <p mdLine class="c-lightblue f-11">
                     Ceybex Tech  
                   </p>
 
@@ -162,24 +171,26 @@
               </ul>
               </a>
              <a md-list-item href="..."  class="no-link-boarder card-footer" >
-                <md-icon class="icons-md-10"> remove_red_eye</md-icon> View All Vacancies
+                <md-icon class="icons-md-10">keyboard_arrow_right
+                    
+                    </md-icon> View All Vacancies
             </a>
 
             </md-list>
         </md-card>
 
         <md-card>
-            <md-card-title>
+            <md-card-title class="f-17">
                 Free Email Newsletter
               </md-card-title>
               <md-card-subtitle>
                   Get the latest content first.
               </md-card-subtitle>
             <md-form-field class="full-width">
-                <input mdInput #postalCode   placeholder="Postal Code"  >
+                <input mdInput #postalCode   placeholder="Enter your email address..."  >
               </md-form-field>
 
-              <button  md-raised-button color="primary">Get Exclusive Updates</button>
+              <button class="md-raised"  md-raised-button color="primary">Get Exclusive Updates</button>
                 
         </md-card>
     </div>

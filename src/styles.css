@@ -1,9 +1,12 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 body {
-    font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+    font-family: roboto, sans-serif;
     margin: 0;
     background-color: #f1f1f1;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #000;
 }
 .row-example div {
     padding: 50px;
@@ -20,7 +23,7 @@ body {
 }
 .container
 {
-    padding: 0px 130px 0;
+    padding: 0px 5% 0;
     display: block;
 }
 @media (max-width: 600px)
@@ -111,7 +114,6 @@ width: 15px !important;
 .card-footer {
     display: block;
     text-align: center;
-    padding: 7px 10px 8px;
     line-height: 100%;
     font-size: 11px !important;
     color: #828282;
@@ -133,4 +135,39 @@ width: 15px !important;
 md-toolbar
 {
     box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+.f-17
+{
+    font-size: 17px !important;
+}
+.f-11
+{
+    font-size: 11px !important;
+}
+.f-14
+{
+    font-size: 14px !important;
+}
+.md-icon-sm {
+     
+    height: 15px !important;
+    width: 15px !important;
+    font-size: 13px !important;
+}
+.f-500
+{
+    font-weight: 500 !important;
+}
+.c-lightblue {
+    color: #0091ca !important;
+}
+.mat-toolbar {
+    min-height: 56px !important;
+}
+.mat-toolbar-row {
+    height: 56px !important;
+}
+.mat-toolbar.mat-primary {
+    background: #283e4a;
+    color: rgba(255,255,255,.87);
 }
