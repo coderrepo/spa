@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { SharedialogComponent } from './shared/sharedialog/sharedialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { JobpartialComponent } from './shared/jobpartial/jobpartial.component';
 
 const MAINMENU_ROUTES: Routes = [
   { path: '', component:HomeComponent, pathMatch: 'full' },
@@ -27,7 +28,8 @@ export const CONST_ROUTING = RouterModule.forRoot(MAINMENU_ROUTES);
     MenuComponent,
     HomeComponent,
     SharedialogComponent,
-    RegisterComponent
+    RegisterComponent,
+    JobpartialComponent
   ],
   imports: [
     BrowserModule,
