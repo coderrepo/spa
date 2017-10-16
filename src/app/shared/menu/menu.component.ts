@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { SharedialogComponent } from '../sharedialog/sharedialog.component';
 @Component({
   selector: 'app-menu',
@@ -8,7 +8,7 @@ import { SharedialogComponent } from '../sharedialog/sharedialog.component';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(public dialog: MdDialog) {
+  constructor(public dialog: MatDialog) {
   }
   animal: string;
   name: string;

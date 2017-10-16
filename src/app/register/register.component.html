@@ -1,72 +1,30 @@
-<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="2%" fxLayoutGap.xs="0">
-  <div class="item item-1" fxFlex="29%">
-
-
-  </div>
-  <div class="item item-2" fxFlex="69%">
-    <md-card class="example-card" style="margin-bottom: 20px">
-      <md-card-title>
-        JOIN TODAY
-      </md-card-title>
-      <md-card-subtitle>
-        Software Developers Community - Targeting Top Software Developers, Project Managers & UX/QA Engineers.
-      </md-card-subtitle>
-      <md-card-content class="m-b-0">
-        <form class="example-form">
-          <md-form-field class="full-width">
-            <input mdInput placeholder="Company (disabled)" disabled value="Google">
-          </md-form-field>
-
-          <table class="full-width" cellspacing="5">
-            <tr>
-              <td>
-                <md-form-field class="full-width">
-                  <input mdInput placeholder="First name">
-                </md-form-field>
-              </td>
-              <td>
-                <md-form-field class="full-width">
-                  <input mdInput placeholder="Long Last Name That Will Be Truncated">
-                </md-form-field>
-              </td>
-            </tr>
-          </table>
-
-          <p>
-            <md-form-field class="full-width">
-              <textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
-            </md-form-field>
-            <md-form-field class="full-width">
-              <textarea mdInput placeholder="Address 2"></textarea>
-            </md-form-field>
-          </p>
-
-          <table class="full-width" cellspacing="5">
-            <tr>
-              <td>
-                <md-form-field class="full-width">
-                  <input mdInput placeholder="City">
-                </md-form-field>
-              </td>
-              <td>
-                <md-form-field class="full-width">
-                  <input mdInput placeholder="State">
-                </md-form-field>
-              </td>
-              <td>
-                <md-form-field class="full-width">
-                  <input mdInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
-                  <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
-                </md-form-field>
-              </td>
-            </tr>
-          </table>
-
-          <button md-raised-button color="accent" class="pull-right"> <md-icon class="md-25" mdTooltip="Share a link!" >share</md-icon>Post</button>
-
-        </form>
-
-      </md-card-content>
-    </md-card>
-  </div>
+<div class="container">
+	<div fxLayout="row" fxLayoutAlign="start center" class="content">
+		<div class="blocks" fxFlex = "20%">1</div>
+		<div class="blocks" fxFlex = "60%">2</div>
+		<div class="blocks" fxFlex>3</div>
+	</div>
+</div>
+<div class="container">
+	<div fxLayout="row" fxLayoutAlign="space-around center" class="content">
+		<div class="blocks">1</div>
+		<div class="blocks">2</div>
+		<div class="blocks">3</div>
+	</div>
+</div>
+<div class="container">
+	<div fxLayout="row" fxLayoutAlign="begin center" class="content">
+		<div class="blocks">1</div>
+		<div class="blocks">2</div>
+		<div class="blocks">3</div>
+	</div>
+</div>
+<div class="container">
+	<div fxLayout="row"
+	     fxLayout.xs="column"
+	     fxLayout.sm="column"
+	     fxFlex class="contentResp">
+		<div class="blocks" fxFlex> I'm above on mobile, and to the left on larger devices.   </div>
+		<div class="blocks" fxFlex> I'm below on mobile, and to the right on larger devices.  </div>
+	</div>
 </div>

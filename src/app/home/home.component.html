@@ -1,197 +1,252 @@
 <div class="container" fxLayout  fxLayout.xs="column"  fxLayoutAlign="center"  fxLayoutGap="2%"  fxLayoutGap.xs="0">
-    <div class="item item-1" fxFlex="24%">
-        <md-card class="m-b-20">
-            <md-card-header>
-              <md-card-title > <md-icon class="md-icon-sm"> star_rate</md-icon>  SPONSERED</md-card-title>
+    <div class="item item-1" fxFlex="24%"  fxShow.xs="false" fxShow.sm="false">
+        <mat-card class="m-b-20 ads-card">
+           
+            
+            <mat-card-header>
+              <mat-card-title >SPONSERED</mat-card-title>
               <span class="fill-remaining-space"></span>
-              <!-- <ol>
-                <li>
-                  <md-form-field>
-                    <input mdInput [(ngModel)]="name" placeholder="What's your name?">
-                  </md-form-field>
-                </li>
-                <li>
-                  <button md-raised-button (click)="openDialog()">Pick one</button>
-                </li>
-                <li *ngIf="animal">
-                  You chose: <i>{{animal}}</i>
-                </li>
-              </ol> -->
-              
-            </md-card-header>
-            <img md-card-image src="http://www.coderfirst.lk/upload/Advertisment/5ccf470f-edf4-42e8-a1ce-965a38a6d9fb320x1001.PNG" alt="Photo of a Shiba Inu">
-            <md-card-content>
-              <h4>Crossover for work</h4>
-              <p>
+            </mat-card-header>
+            <img mat-card-image src="http://www.coderfirst.lk/upload/Advertisment/5ccf470f-edf4-42e8-a1ce-965a38a6d9fb320x1001.PNG" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <h3 class="m-b-0">Crossover for work</h3>
+              <p class="text-muted f-12">
                   Crossover is redefining the way people work. We believe that brick and mortar offices are artefacts of ancient history.
               </p>
-            </md-card-content>
+            </mat-card-content>
              
-          </md-card>
+          </mat-card>
 
-      <md-card class="p-0">
-          <md-tab-group>
-              <md-tab label="Members">
-                  <md-list>
-                      <md-list-item *ngFor="let folder of folders">
-                          <img mdListAvatar src="http://www.coderfirst.lk/upload/member/images/ProfilePhoto/0b6a98ed-2931-43b3-9830-a9bec7ba15b4.png" alt="...">
-                          <h3 mdLine> {{folder.name}} </h3>
-                          <p mdLine>
+      <mat-card class="p-0 app-status">
+          <mat-tab-group>
+              <mat-tab label="Members">
+                  <mat-list>
+                      <mat-list-item *ngFor="let folder of folders">
+                          <img matListAvatar src="http://www.coderfirst.lk/upload/member/images/ProfilePhoto/0b6a98ed-2931-43b3-9830-a9bec7ba15b4.png" alt="...">
+                          <h3 matLine class="f-500"> {{folder.name}} </h3>
+                          <p matLine>
                             <span> {{folder.updated}} </span>
-                            <span class="demo-2"> -- {{folder.updated}} </span>
                           </p>
-                        </md-list-item>
+                          <p matLine>
+                              <span class="f-9 text-muted">Joined 4 days ago</span>
+                          </p>
+                        </mat-list-item>
 
  
-                    </md-list>
-              </md-tab>
-              <md-tab label="Post">
-                <md-list>
-                  <md-list-item *ngFor="let folder of folders">
-                    <md-icon md-list-icon>folder</md-icon>
-                    <h4 md-line>{{folder.name}}</h4>
-                    <p md-line> {{folder.updated | date}} </p>
-                  </md-list-item>
-                  <md-divider></md-divider>
-                  <h3 md-subheader>Notes</h3>
-                  <md-list-item *ngFor="let note of notes">
-                    <md-icon md-list-icon>note</md-icon>
-                    <h4 md-line>{{note.name}}</h4>
-                    <p md-line> {{note.updated | date}} </p>
-                  </md-list-item>
-                </md-list>
-              </md-tab>
-            </md-tab-group>
-      </md-card>
+                    </mat-list>
+              </mat-tab>
+              <mat-tab label="Post">
+                <mat-list>
+                  <mat-list-item *ngFor="let folder of folders">
+                    <mat-icon mat-list-icon>folder</mat-icon>
+                    <h4 mat-line>{{folder.name}}</h4>
+                    <p mat-line> {{folder.updated | date}} </p>
+                  </mat-list-item>
+                  <mat-divider></mat-divider>
+                  <h3 mat-subheader>Notes</h3>
+                  <mat-list-item *ngFor="let note of notes">
+                    <mat-icon mat-list-icon>note</mat-icon>
+                    <h4 mat-line>{{note.name}}</h4>
+                    <p mat-line> {{note.updated | date}} </p>
+                  </mat-list-item>
+                </mat-list>
+              </mat-tab>
+            </mat-tab-group>
+      </mat-card>
     </div>
-    <div class="item item-2" fxFlex="50%" >
-        <md-card class="example-card m-b-20">
+    <div class="item item-2" fxFlex="50%" fxFlex.xs="100%" fxFlex.sm="100%"  >
+
+       
+        <mat-card class="m-b-20">
             
-           
-            <md-card-content class="m-b-0">
-                <form class="example-form">
-                    <md-form-field class="full-width">
-                      <input style="width: 100%" mdInput placeholder="SUBMIT A LINK e.g. http://example.com/interesting-web-page" value="">
-                    </md-form-field>
+            <mat-card-content class="m-b-0" >
+                
+
+                <form>
+                    <mat-form-field class="full-width">
+                      <input (paste)="onPaste($event)" class="full-width" matInput placeholder="SUBMIT A LINK e.g. http://example.com/interesting-web-page" value="">
+                    </mat-form-field>
+               
+                    <mat-form-field class="full-width" *ngIf="isPasted">
+                        <input class="full-width" matInput placeholder="Title">
+                      </mat-form-field>
+                      <mat-form-field class="full-width" *ngIf="isPasted">
+                          <textarea class="full-width" matInput placeholder="Description" value=""></textarea>
+                        </mat-form-field>
+                        <mat-form-field class="full-width" *ngIf="isPasted">
+                            <mat-chip-list #chipList >
+                              <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+                                       [removable]="removable" (remove)="remove(fruit)">
+                                {{fruit.name}}
+                                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                              </mat-chip>
+                              <input placeholder="New fruit..."
+                                     [matChipInputFor]="chipList"
+                                     [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                     [matChipInputAddOnBlur]="addOnBlur"
+                                     (matChipInputTokenEnd)="add($event)" />
+                            </mat-chip-list>
+                          </mat-form-field>
                   </form>
-            </md-card-content>
-            <md-card-actions>
-           
-              <button md-icon-button>
-                <md-icon class="md-25" mdTooltip="Share a link!" >share</md-icon>
+            </mat-card-content>
+            <img mat-card-image *ngIf="isPasted" src="http://www.coderfirst.lk/upload/post/images/links/faf5af31-361a-4475-b56c-c5fbfeceaa03.png" alt="Photo of a Shiba Inu">
+            
+            <mat-card-actions *ngIf="!isPasted">
+              <button mat-icon-button>
+                <mat-icon class="mat-25" matTooltip="Share a link!" >share</mat-icon>
               </button>
-              <button md-icon-button>
-                <md-icon class="md-25" mdTooltip="Share a video!" >play_circle_outline</md-icon>
+              <button mat-icon-button>
+                <mat-icon class="mat-25" matTooltip="Share a video!" >play_circle_outline</mat-icon>
               </button>
-              <button md-icon-button>
-                <md-icon class="md-25" mdTooltip="Write an article!" >mode_edit</md-icon>
+              <button mat-icon-button>
+                <mat-icon class="mat-25" matTooltip="Write an article!" >mode_edit</mat-icon>
               </button>
-
               <span class="fill-remaining-space"></span>
-              <button md-raised-button  color="primary" class="pull-right"> <md-icon class="md-25" mdTooltip="Share a link!" >share</md-icon>Post</button>
+              <button mat-raised-button  color="primary" class="pull-right"> <mat-icon class="mat-25" matTooltip="Share a link!" >share</mat-icon> Post</button>
+            </mat-card-actions>
 
-            </md-card-actions>
-          </md-card>
+            <mat-card-actions *ngIf="isPasted">
+                <button mat-icon-button>
+                  <mat-icon class="mat-25" matTooltip="Move Previous!" >keyboard_arrow_left</mat-icon>
+                </button>
+                <button mat-icon-button>
+                  <mat-icon class="mat-25" matTooltip="Move Next!" >keyboard_arrow_right</mat-icon>
+                </button>
+                <button mat-icon-button>
+                  <mat-icon class="mat-25" matTooltip="Remove Image!" >block</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon class="mat-25" matTooltip="Upload image!" >file_upload</mat-icon>
+                  </button>
 
-        <md-card class="example-card">
-            <md-card-header>
-              <div md-card-avatar class="example-header-image"></div>
-              <md-card-title>Shazin Sadakath</md-card-title>
-              <md-card-subtitle>Senior Software Engineer</md-card-subtitle>
+                <span class="fill-remaining-space"></span>
+                <button mat-raised-button (click)="cancel()" class="pull-right">Cancel</button>
+                <button mat-raised-button  color="primary" class="pull-right"> <mat-icon class="mat-25" matTooltip="Share a link!" >done_all</mat-icon> Post Now</button>
+                
+              </mat-card-actions>
+
+
+          </mat-card>
+          <mat-card>
+              <mat-card-content class="m-b-0">
+                  <h4 class="m-b-0">All Posts </h4>
+                  <div class="pull-right-cus">
+                      <div class="button-row">
+                          <button mat-icon-button>
+                            <mat-icon    matTooltip="Popular Posts!">trending_up
+                              </mat-icon>
+                          </button>
+                          <button mat-icon-button>
+                            <mat-icon    matTooltip="Recency Posts!">update
+                              </mat-icon>
+                          </button>
+                          <button mat-icon-button >
+                            <mat-icon   matTooltip="All Posts!">gps_fixed
+                              </mat-icon>
+                          </button>
+                      
+                        </div>
+                  </div>
+           
+              </mat-card-content>
+   
+            </mat-card>
+        <mat-card class="example-card">
+
+
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Shazin Sadakath</mat-card-title>
+              <mat-card-subtitle>Senior Software Engineer</mat-card-subtitle>
               <span class="fill-remaining-space"></span>
               <div class="wis-numbers">
-                  <span> <md-icon class="icons-md-15"> remove_red_eye</md-icon> 5  </span>
-                  <span><md-icon class="icons-md-15">share</md-icon></span>
+                  <span> <mat-icon class="mat-icon-sm" > remove_red_eye</mat-icon> 5  </span>
+                  <span><mat-icon class="mat-icon-sm">share</mat-icon></span>
 
               </div>
-            </md-card-header>
-            <md-card-content>
+            </mat-card-header>
+            <mat-card-content>
               <h2>Techtalks - Asynchronous Streaming Request Processing in Spring MVC 4.2 + Spring Boot</h2>
               
-            </md-card-content>
-            <img md-card-image src="http://www.coderfirst.lk/upload/post/images/links/faf5af31-361a-4475-b56c-c5fbfeceaa03.png" alt="Photo of a Shiba Inu">
-            <md-card-content>
+            </mat-card-content>
+            <img mat-card-image src="http://www.coderfirst.lk/upload/post/images/links/faf5af31-361a-4475-b56c-c5fbfeceaa03.png" alt="Photo of a Shiba Inu">
+            <mat-card-content>
                 <p>
                   The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
                   A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
                   bred for hunting.
                 </p>
-              </md-card-content>
-            <md-card-actions>
-              <button md-button>LIKE</button>
-              <button md-button>SHARE</button>
-            </md-card-actions>
-          </md-card>
-    </div>
-    <div class="item item-3" fxFlex="24%">
-        <md-card class="p-0 m-b-20">
-          <md-card-header class="p-t-10 p-b-10 ch-alt text-center f-c-white " style="background-color: #0091ca;">LOOKING FOR A JOB?</md-card-header>
-          <md-list >
-              <a md-list-item href="..."  class="no-link-boarder b-t-1" >
-                  <h3 mdLine class="f-500 f-14">Junior PHP Developer</h3>
-                  <p mdLine class="c-lightblue f-11">
+              </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+          
+    
+        <mat-spinner style="margin:0 auto; margin-top: 50px" [diameter]="70" [strokeWidth]="5" ></mat-spinner>
+        
+        </div>
+
+    <div class="item item-3" fxFlex="24%" fxShow.xs="false" fxShow.sm="false">
+        <mat-card class="p-0 m-b-20">
+          
+          <mat-card-header class="p-t-16 p-b-16 f-c-white f-500" style="background-color: #673ab7;">
+            <p class="full-width m-0" style="text-align: center">LOOKING FOR A JOB? </p>
+          </mat-card-header>
+          <mat-list class="p-t-0" >
+              <a mat-list-item href="..."  class="no-link-boarder b-t-1" >
+                  <h3 matLine class="f-500 f-14">Junior PHP Developer</h3>
+                  <p matLine class="c-lightblue f-11">
                     Ceybex Tech  
                   </p>
 
-                  <ul mdLine class="lgi-attrs" style="height:25px">
-                      <li  > Microsoft .NET Framework 3.5 SP1</li>
-                      <li > Web Services</li>
+                  <ul matLine class="lgi-attrs" style="height:25px">
+                      <li > Microsoft .NET Framework 3.5 SP1</li>
+                      <li> Web Services</li>
               </ul>
-              </a>          <a md-list-item href="..."  class="no-link-boarder b-t-1" >
-                  <h3 mdLine class="f-500 f-14">Junior PHP Developer</h3>
-                  <p mdLine class="c-lightblue f-11">
+              </a>          <a mat-list-item href="..."  class="no-link-boarder b-t-1" >
+                  <h3 matLine class="f-500 f-14">Junior PHP Developer</h3>
+                  <p matLine class="c-lightblue f-11">
                     Ceybex Tech  
                   </p>
 
-                  <ul mdLine class="lgi-attrs" style="height:25px">
-                      <li  > Microsoft .NET Framework 3.5 SP1</li>
-                      <li > Web Services</li>
-              </ul>
-              </a>
-              <a md-list-item href="..."  class="no-link-boarder b-t-1" >
-                  <h3 mdLine class="f-500 f-14">Junior PHP Developer</h3>
-                  <p mdLine class="c-lightblue f-11">
-                    Ceybex Tech  
-                  </p>
-
-                  <ul mdLine class="lgi-attrs" style="height:25px">
-                      <li  > Microsoft .NET Framework 3.5 SP1</li>
-                      <li > Web Services</li>
-              </ul>
-              </a>
-              <a md-list-item href="..."  class="no-link-boarder b-t-1" >
-                  <h3 mdLine class="f-500 f-14">Junior PHP Developer</h3>
-                  <p mdLine class="c-lightblue f-11">
-                    Ceybex Tech  
-                  </p>
-
-                  <ul mdLine class="lgi-attrs" style="height:25px">
+                  <ul matLine class="lgi-attrs" style="height:25px">
                       <li  > Microsoft .NET Framework 3.5 SP1</li>
                       <li > Web Services</li>
               </ul>
               </a>
-             <a md-list-item href="..."  class="no-link-boarder card-footer" >
-                <md-icon class="icons-md-10">keyboard_arrow_right
+              <a mat-list-item href="..."  class="no-link-boarder b-t-1" >
+                  <h3 matLine class="f-500 f-14">Junior PHP Developer</h3>
+                  <p matLine class="c-lightblue f-11">
+                    Ceybex Tech  
+                  </p>
+
+                  <ul matLine class="lgi-attrs" style="height:25px">
+                      <li  > Microsoft .NET Framework 3.5 SP1</li>
+                      <li > Web Services</li>
+              </ul>
+              </a>
+              <a mat-list-item href="..."  class="no-link-boarder b-t-1" >
+                  <h3 matLine class="f-500 f-14">Junior PHP Developer</h3>
+                  <p matLine class="c-lightblue f-11">
+                    Ceybex Tech  
+                  </p>
+
+                  <ul matLine class="lgi-attrs" style="height:25px">
+                      <li  > Microsoft .NET Framework 3.5 SP1</li>
+                      <li > Web Services</li>
+              </ul>
+              </a>
+             <a mat-list-item href="..."  class="no-link-boarder card-footer" >
+                <mat-icon class="icons-mat-12">keyboard_arrow_right
                     
-                    </md-icon> View All Vacancies
+                    </mat-icon> View All Vacancies
             </a>
 
-            </md-list>
-        </md-card>
+            </mat-list>
+        </mat-card>
 
-        <md-card>
-            <md-card-title class="f-17">
-                Free Email Newsletter
-              </md-card-title>
-              <md-card-subtitle>
-                  Get the latest content first.
-              </md-card-subtitle>
-            <md-form-field class="full-width">
-                <input mdInput #postalCode   placeholder="Enter your email address..."  >
-              </md-form-field>
-
-              <button class="md-raised"  md-raised-button color="primary">Get Exclusive Updates</button>
-                
-        </md-card>
+        <app-subscribe> </app-subscribe>
     </div>
     </div>

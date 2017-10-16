@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MdDialogRef, MD_DIALOG_DATA} from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   templateUrl: './sharedialog.component.html',
@@ -8,8 +8,8 @@ import { MdDialogRef, MD_DIALOG_DATA} from '@angular/material';
 export class SharedialogComponent {
 
   constructor(
-    public dialogRef: MdDialogRef<SharedialogComponent>,
-    @Inject(MD_DIALOG_DATA) public data: any) { }
+    public dialogRef: MatDialogRef<SharedialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   onNoClick(): void {
     this.dialogRef.close();

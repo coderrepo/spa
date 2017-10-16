@@ -1,20 +1,21 @@
-<md-toolbar   color="primary" class="main-toolbar md-medium-tall">
-  <a style="margin-top: 7px"  [routerLink]="['/']"><img src="http://www.coderfirst.lk//Content/images/logo-6-17-17.png?ver=3"></a>  
+<!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
+<mat-toolbar   color="primary" class="main-toolbar mat-medium-tall">
+  <a style="margin-top: 7px"  [routerLink]="['/']"><img src="http://www.coderfirst.lk/Content/images/logo-6-17-17.png?ver=3"></a>  
   <span class="example-spacer"></span>
-  <button md-button  [routerLink]="['/career']">CAREER</button>
-  <button md-button  [routerLink]="['/career']">WRITE POST</button>
-  <button md-button >SHARE</button>  
-  <button md-button  [routerLink]="['/register']">REGISTER</button>
+  <button mat-button  [routerLink]="['/career']">CAREER</button>
+  <button mat-button  [routerLink]="['/career']">WRITE POST</button>
+  <button mat-button >SHARE</button>  
+  <button mat-button  [routerLink]="['/register']">REGISTER</button>
   
   <span class="fill-remaining-space"></span>
-  <button md-raised-button (click)="openDialog()" color="accent"> <md-icon class="md-25" mdTooltip="Share a link!" >share</md-icon>Share</button>
-  <button   md-button [mdMenuTriggerFor]="appMenu"> <img  alt="angular" class="docs-angular-logo" src="https://material.angular.io/assets/img/homepage/github-circle-white-transparent.svg"> &nbsp; Hi, Askar <md-icon>more_vert</md-icon></button>
+  
+  <button mat-button (click)="openDialog()"  > <mat-icon class="mat-25" matTooltip="Share a link!" >share</mat-icon>Share</button>
+  <button   mat-button [matMenuTriggerFor]="appMenu"> <img  alt="angular" class="docs-angular-logo" src="https://material.angular.io/assets/img/homepage/github-circle-white-transparent.svg"> &nbsp; Hi, Askar <mat-icon>more_vert</mat-icon></button>
    
-</md-toolbar>
-<md-menu #appMenu="mdMenu">
-  <button md-menu-item> Settings </button>
-  <button md-menu-item> Help </button>
-</md-menu>
+</mat-toolbar>
+ 
 
-
-
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item> Settings </button>
+  <button mat-menu-item> Help </button>
+</mat-menu>

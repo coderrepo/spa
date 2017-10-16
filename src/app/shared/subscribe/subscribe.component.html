@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-title class="f-17">
+      Free Email Newsletter
+    </mat-card-title>
+    <mat-card-subtitle class="f-12 text-muted">
+        Get the latest content first.
+    </mat-card-subtitle>
+    <form [formGroup]="subscribeForm" (ngSubmit)="subscribe(subscribeForm)">
+            <mat-form-field class="full-width">
+                    <input matInput formControlName="emailaddress" id="emailaddress" placeholder="Enter your email address."  >
+                  </mat-form-field>
+        <button class="btn-block" type="submit"  mat-raised-button color="primary">Get Exclusive Updates</button>
+        <p class="f-12 text-muted">No spam. Just great software engineering posts.</p>
+    </form>
+</mat-card>
